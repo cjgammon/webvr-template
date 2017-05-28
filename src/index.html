@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>cjgammon: Creative Technology</title>
+    	<meta name="description" content="the work of cjgammon">
+    	<meta name="author" content="cjgammon">
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="shortcut icon" href="assets/icons/favicon.ico">
+    	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/apple-touch-icon-114x114-precomposed.png">
+    	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/icons/apple-touch-icon-72x72-precomposed.png">
+    	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/icons/apple-touch-icon-57x57-precomposed.png">
+    	<link rel="apple-touch-icon-precomposed" href="assets/icons/apple-touch-icon-precomposed.png">
+
+    	<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  		<link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
+  		<!--[if IE]>
+      		<link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  		<![endif]-->
+
+		<script src="//use.typekit.net/sir4jfg.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	</head>
+	<body>
+
+        <canvas id="scene"></canvas>
+
+		<main>
+			<section id="content-section">
+				<h1>Radiolights</h1>
+			</section>
+		</main>
+
+		<div id="enter-cover" class="cover">
+			<div id="cover-inner">
+				Tap to enter VR
+			</div>
+		</div>
+
+		<div id="exit-cover" class="cover">
+			<div id="cover-inner">
+				<div>Rotate and place in Headset</div>
+				<div>Tap to exit VR</div>
+			</div>
+		</div>
+
+		<div id="enter-button" class="fixed-button">
+			Enter VR
+		</div>
+
+		<div id="exit-button" class="cover">
+			Exit VR
+		</div>
+
+		<div id="splash-screen">
+			splash
+		</div>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-8576267-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
+		<script>
+		(function () {
+		  function CustomEvent ( event, params ) {
+		    params = params || { bubbles: false, cancelable: false, detail: undefined };
+		    var evt = document.createEvent( 'CustomEvent' );
+		    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+		    return evt;
+		   }
+
+		  CustomEvent.prototype = window.Event.prototype;
+
+		  window.CustomEvent = CustomEvent;
+		})();
+		</script>
+
+		<script>
+		WebVRConfig = {
+            CARDBOARD_UI_DISABLED: true,
+            ROTATE_INSTRUCTIONS_DISABLED: true
+        };
+		</script>
+
+		<!-- @if ENV='production' -->
+    <script src="js/main-min.js"></script>
+		<!-- @endif -->
+		<!-- @if ENV='dev' -->
+    <script src="js/main.js"></script>
+		<!-- @endif -->
+
+	</body>
+</html>
