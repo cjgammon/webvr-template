@@ -40,6 +40,5 @@ export default class MainScene {
                 this.cube.material= new THREE.MeshNormalMaterial();
             }
         }
-        console.log('done');
     }
 }

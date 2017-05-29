@@ -33,6 +33,7 @@ export default class AppWeb {
 
       this.clock = new THREE.Clock( true );
 
+      this.resize();
     }
 
     render() {
