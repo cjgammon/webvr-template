@@ -5,7 +5,7 @@ It utilizes `webvr-polyfill` to work on mobile devices with a headset. It also w
 
 Blender is used to create the scene. You can update and export the included .blender file and it will use it for the scene.
 
-## instllation 
+## installation 
 `npm install`
 
 ## build 
