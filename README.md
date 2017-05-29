@@ -5,11 +5,11 @@ It utilizes `webvr-polyfill` to work on mobile devices with a headset. It also w
 
 Blender is used to create the scene. You can update and export the included .blender file and it will use it for the scene.
 
-##instllation
+## instllation 
 `npm install`
 
-##build
+## build 
 `gulp`
 
-##watch
+## watch 
 `gulp watch`
